@@ -34,7 +34,7 @@ import { useNavigation } from '@react-navigation/native';
 			</View>
 		</>
 	);
- };
+ }
 
  const styles = StyleSheet.create(
 	{

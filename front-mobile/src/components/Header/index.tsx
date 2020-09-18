@@ -19,7 +19,7 @@ const Header = () => {
 			</View>
 		</TouchableWithoutFeedback>
 	);
-};
+}
 
 const styles = StyleSheet.create(
 	{
