@@ -1,14 +1,19 @@
 import React from 'react';
-import { FontAwesome5 as Icon} from '@expo/vector-icons'
+import { FontAwesome5 as Icon} from '@expo/vector-icons';
 import { Text, StyleSheet, View, Image, Alert } from 'react-native';
-import { RectButton } from 'react-native-gesture-handler'
+import { RectButton } from 'react-native-gesture-handler';
+import Header from '../../components/Header';
+import { useNavigation } from '@react-navigation/native';
 
  const Home = () => {
+	const navigation = useNavigation();
+
 	const handleOnPress = () => {
-		Alert.alert('Você clicou no botão!')
+		navigation.navigate('CreateRecord');
 	}
 	return (
 		<>
+			<Header />
 			<View style={styles.container}>
 				<Image 
 					source={require('../../assets/gamer.png')}
@@ -30,8 +35,6 @@ import { RectButton } from 'react-native-gesture-handler'
 		</>
 	);
  };
-
- export default Home;
 
  const styles = StyleSheet.create(
 	{
@@ -86,3 +89,5 @@ import { RectButton } from 'react-native-gesture-handler'
 		}
 	}
  );
+
+ export default Home;
